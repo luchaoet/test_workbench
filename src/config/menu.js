@@ -1,10 +1,10 @@
 // 菜单配置
 
 const menuConfig = [
-  {key: '首页', value: 'home', path: '/home', icon: 'rpa-shouye'},
-  {key: '首页2', value: 'staffManagement', path: '/staffManagement', icon: 'rpa-yonghu'},
-  {key: '操作日志', value: 'logQuery', path: '/logQuery', icon: 'rpa-rizhi'},
-  {key: '首页3', value: 'not', path: '/not', icon: 'rpa-yingyong'},
+  {key: '首页', value: 'home', path: '/home', icon: 'iconshouye'},
+  {key: '日志列表', value: 'list', path: '/list', icon: 'iconrenwu'},
+  {key: '日志管理', value: 'management', path: '/management', icon: 'icongongnengjianyi'},
+  // {key: '', value: 'not', path: '/not', icon: 'rpa-yingyong'},
 ];
 
 const asideMenuConfig = {
