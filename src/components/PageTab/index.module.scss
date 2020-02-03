@@ -1,0 +1,33 @@
+.wrap {
+    white-space: nowrap;
+    border-bottom: solid 1px #DCDEE3;
+    display: flex;
+    background: #fff;
+    padding: 0 20px;
+    a {
+        position: relative;
+        height: 48px;
+        line-height: 48px;
+        padding: 0 20px;
+        cursor: pointer;
+        color: #666;
+        transition: all .4s cubic-bezier(.23,1,.32,1);
+        &:after {
+            position: absolute;
+            content: '';
+            height: 2px;
+            background: #06F;
+            width: 0;
+            border-radius: 2px;
+            left: 50%;
+            bottom: -1px;
+            transition: all .4s cubic-bezier(.23,1,.32,1);
+        }
+    }
+    .tabActive {
+        &:after {
+            width: 100%;
+            left: 0;
+        }
+    }
+}

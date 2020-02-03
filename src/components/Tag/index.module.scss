@@ -1,0 +1,14 @@
+.wrap {
+	display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    padding: 0 7px;
+    line-height: 20px;
+    border-radius: 4px;
+    cursor: default;
+    opacity: 1;
+	transition: opacity .3s cubic-bezier(.78,.14,.15,.86);
+	&:hover{
+        opacity: 0.9;
+    }
+}

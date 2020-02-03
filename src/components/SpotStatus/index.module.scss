@@ -1,0 +1,22 @@
+.wrap {
+    position: relative;
+    i {
+        position: absolute;
+        top: 30%;
+        left: 6px;
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        color: #000;
+    }
+    span {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 20px;
+        overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+    }
+
+}
