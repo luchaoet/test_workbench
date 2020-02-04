@@ -11,10 +11,11 @@
     "axios": "^0.17.1",
     "classnames": "^2.2.5",
     "dva": "^2.4.1",
+    "echarts": "^4.6.0",
     "enquire-js": "^0.1.2",
     "prop-types": "^15.5.8",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react-dom": "^16.8.1",
     "react-router-dom": "^5.0.1"
   },
   "devDependencies": {
