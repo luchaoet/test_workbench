@@ -10,7 +10,8 @@ export function createService({url, params, method='get'}) {
       resolve(response.data)
     })
     .catch(function (error) {
-      reject(error);
+      resolve(error)
+      // reject(error);
     });
   })
 }

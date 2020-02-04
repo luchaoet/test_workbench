@@ -13,11 +13,23 @@ const mapStateToProps = state => state.listModel;
 const mapDispatchToProps = dispatch => {return { dispatch }};
 
 function ListPage(props) {
-  // console.log(props)
 	const { dispatch, logList } = props;
 	
 	function filterChange(source) {
-		console.log(source)
+		const time = source.start_end_time.length === 0 ? '' : source.start_end_time.join(',');
+		const start_end_time = time.replace(/-/g, '');
+
+		dispatch({
+			type: 'listModel/changeModelState',
+			key: 'filter',
+			value: {
+				start_end_time,
+				log_status: source.log_status,
+				rpp_name: source.rpp_name,
+				machine_ip: source.machine_ip
+			}
+		})
+		dispatch({type: 'listModel/fetchLogList'})
 	}
 	
 	useEffect(() => {
@@ -62,11 +74,11 @@ function ListPage(props) {
       <Table dataSource={logList} hasBorder={false}>
 				<Table.Column title="IP" dataIndex="machine_ip" />
 				<Table.Column title="logName" dataIndex="log_name" />
-				<Table.Column title="status" dataIndex="status" cell={ status => {
+				<Table.Column title="status" dataIndex="status" width={80} cell={ status => {
 					return <Tag text={status == 0 ? '异常' : '正常'} />
 				}}/>
 				<Table.Column title="message" dataIndex="message" />
-				<Table.Column title="logTime" dataIndex="log_time" cell={ time => {
+				<Table.Column title="logTime" dataIndex="log_time" width={110} cell={ time => {
 					return <MainAndSubTitle mainTitle='2019-05-22' subTitle= '16:48:07' />
 				}} />
 				<Table.Column title="rppName" dataIndex="rpp_name" />

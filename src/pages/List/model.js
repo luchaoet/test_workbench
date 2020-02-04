@@ -36,12 +36,7 @@ export default {
 	},
 	
   reducers: {
-		changeModelState(state, { key, value }) {
-      return {
-        ...state,
-      [key]: value
-      };
-    }
+		changeModelState(state, {key, value}) { return {...state, [key]: value} }
   },
   effects: {
 		*fetchLogList({}, { call, put, select }) {
@@ -56,7 +51,7 @@ export default {
 					rpp_name: filter.rpp_name,
 					machine_ip: filter.machine_ip
 				}
-      });
+			});
       if(res && res.success){
 				yield put({
 					type: 'changeModelState',

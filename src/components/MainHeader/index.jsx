@@ -9,7 +9,7 @@ function MainHeader(props) {
   return (
     <div className={`${styles.wrap} ${className}`}>
       <i 
-        className={`iconfont ${  menuVisible ? 'rpa-caidanshouqi': 'rpa-caidanzhankai'}`}
+        className={`iconfont ${  menuVisible ? 'iconcaidanshouqi': 'iconcaidanzhankai'}`}
         onClick={()=>{ if(iconClick)iconClick() }}
       ></i>
       <div className={styles.headerRight}>

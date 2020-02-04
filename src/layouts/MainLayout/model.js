@@ -15,19 +15,7 @@ export default {
     }
   },
   effects: {
-		*fetchNotification({callback}, { call }) {
-      const res = yield call(createService, {
-				url: 'https://luchaoet.com/express/article/list', // ?currentPage=1&pageSize=10
-				params: {
-					currentPage: 1,
-          pageSize: 10
-				}
-      });
-      if(res && res.success){
-        if(callback)callback(res);
-      }
-    },
-
+		
   },
   subscriptions: { },
 };
