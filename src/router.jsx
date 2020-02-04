@@ -6,7 +6,7 @@ import { Router, Switch, Route, Redirect } from 'dva/router';
 
 const RouteItem = (props) => {
   const { redirect, path: routePath, component, key } = props;
-  console.log()
+  // console.log()
   if (redirect) {
     return (
       <Redirect

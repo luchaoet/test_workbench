@@ -36,7 +36,7 @@ function CustomRangePicker(props) {
 
 	useEffect(() => {
 		if(
-			(startValue !== '' || endValue !== '') && 
+			(startValue !== '' && endValue !== '') && 
 			onChange
 		){
 			onChange([momentToString(startValue), momentToString(endValue)])
