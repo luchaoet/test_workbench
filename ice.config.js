@@ -17,4 +17,11 @@ module.exports = {
   alias: {
     '@': path.resolve(__dirname, './src/'),
   },
+  proxy: {
+    '/**': {
+      // 通过 enable 字段快速开关代理配置
+      enable: true,
+      target: 'http://47.111.2.9/'
+    }
+  }
 };
