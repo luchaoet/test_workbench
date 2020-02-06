@@ -14,7 +14,7 @@ const mapStateToProps = state => state.mainModel;
 const mapDispatchToProps = dispatch => {return { dispatch }};
 
 function MainLayout(props) {
-  const { dispatch } = props;
+  const { pageName } = props;
 
   const [isScreen, setIsScreen] = useState();
   const [menuVisible, setMenuVisible] = useState(true);
@@ -87,7 +87,7 @@ function MainLayout(props) {
           iconClick={()=>setMenuVisible(!menuVisible)} 
         />
         <div className={styles.rightContent}>
-          <div className={styles.pageName}>首页</div>
+          <div className={styles.pageName}>{pageName}</div>
           {/* <PageTab /> */}
           {props.children}
           <div className={styles.footer}>

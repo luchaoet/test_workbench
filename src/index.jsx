@@ -9,11 +9,13 @@ import '@/utils/iconfont.css';
 import mainModel from '@/layouts/MainLayout/model';
 import listModel from '@/pages/List/model';
 import homeModel from '@/pages/Home/model';
+import managementModel from '@/pages/Management/model';
 
 const models=[
   mainModel,
   listModel,
-  homeModel
+  homeModel,
+  managementModel
 ];
 
 // 创建dva实例
